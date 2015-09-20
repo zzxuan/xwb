@@ -23,6 +23,24 @@ $(document).ready(function(e) {
 	});
 });
 </script>
+<script type="text/javascript">
+
+function checkboxclick()
+{
+ var btn = document.getElementById('regsubbtn');
+ btn.style.background="#4154e2"; 
+ btn.disabled = false;
+}
+
+</script>
+<style type="text/css"> 
+    .divwstyle
+    {
+        margin:10px 10px 10px 85px;
+        border:1px solid #99cccc;
+    }
+</style>
+</head>
 
 </head>
 
@@ -52,7 +70,7 @@ $(document).ready(function(e) {
     </div>
 
     </li>
-    <li><label>联系电话<b>*</b></label><input name="" type="text" class="nameinput" /><i>作为缴费的依据，请填写真实信息</i></li>
+    <li><label>QQ号<b>*</b></label><input name="" type="text" class="nameinput" /><i>作为缴费的依据，请填写真实信息</i></li>
     <li><label>就读学校<b>*</b></label><input name="" type="text" class="dfinput" /><i>填写学校全称</i></li>
     <li><label>所在年级<b>*</b></label>
         
@@ -83,9 +101,26 @@ $(document).ready(function(e) {
     <option>西安帝京学校</option>
     </select>
     </div>
-    <i><a href="#" target="_blank"><font color="blue">缴费地址查看</font></a></i>
     </li>
-    <li><label>&nbsp;</label><input name="" type="button" class="btn" value="提交信息"/></li>
+    
+    <li><label>报名须知<b>*</b></label>
+    
+    <div class="divwstyle">
+    <ul class="iconlist">
+    
+    <li><img src="images/weixin.png" width="120" height="120"/><p><a>官方微信</a></p></li>
+    <li>
+    <p>四年级群号 123456</p>
+    <p>五年级群号 123456</p>
+    <p>六年级群号 123456</p>
+    <p>初一群号   123456</p>
+    <p>初二群号   123456</p>
+    </li>
+    </ul>
+    </div>
+    </li>
+    <li><label>&nbsp;</label><input type="checkbox" onclick ="checkboxclick()">已阅读须知</input></li>
+    <li><label>&nbsp;</label><input disabled="true" id="regsubbtn" name="" type="button" class="btndis" value="提交信息"/></li>
     </ul>
     
     

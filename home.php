@@ -44,28 +44,6 @@
     
     <div class="xline"></div>
     
-    <div class="welinfo">
-    <b>信息通知</b>
-    </div>
-    <div class="welinfo">
-    <span><img src="images/time.png" alt="时间" /></span>
-    <i>请关注官方微信和QQ群获得最新动态
-    </div>
-
-    <ul class="iconlist">
-    
-    <li><img src="images/weixin.png" width="120" height="120"/><p><a>官方微信</a></p></li>
-    <li>
-    <p>四年级群号 123456</p>
-    <p>五年级群号 123456</p>
-    <p>六年级群号 123456</p>
-    <p>初一群号   123456</p>
-    <p>初二群号   123456</p>
-    </li>
-    </ul>
-
-    <div class="xline"></div>
-    
     <div class="uimakerinfo"><b>报名流程</b></div>
     
     <ul class="umlist">
