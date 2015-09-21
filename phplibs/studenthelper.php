@@ -2,7 +2,7 @@
 
 require_once ('db.php');
 
-class hwuser
+class xwbstudent
 {
     public $stdid;
     public $stdname;
@@ -12,6 +12,7 @@ class hwuser
     public $stdgrade;
     public $stdaddress;
     public $stdpayaddress;
+    public $createtime;
 
     function setvalues($row)
     {
@@ -33,9 +34,11 @@ class hwuser
             $this->stdaddress = $row['stdaddress'];
         if (isset($row['stdpayaddress']))
             $this->stdpayaddress = $row['stdpayaddress'];
+        if (isset($row['createtime']))
+            $this->createtime = $row['createtime'];
     }
 
-    
+
     //添加学生
     public static function addstudent($name, $num, $gender, $school, $grader, $address,
         $payaddr)
@@ -43,12 +46,37 @@ class hwuser
         $db = new DB();
         return $db->insert('xwb_student', array(
             "stdname" => $name,
-            "stdnum" => $num,
+            "stdnum" => trim($num),
             "stdgender" => $gender,
             "stdschool" => $school,
             "stdgrade" => $grader,
             "stdaddress" => $address,
-            "stdpayaddress" => $payaddr));
+            "stdpayaddress" => $payaddr,
+            "createtime" =>  date("Y-m-d H:i:s")));
+    }
+
+    public static function isnumexist($num)
+    {
+        $db = new DB();
+        $n = trim($num);
+        $sql = "select * from xwb_student where stdnum = '$n'";
+        $query = $db->query($sql);
+        return ($query != null && mysql_num_rows($query) > 0);
+    }
+
+    public static function getstdbynum($num)
+    {
+        $db = new DB();
+        $n = trim($num);
+        $sql = "select * from xwb_student where stdnum = '$n'";
+        $query = $db->query($sql);
+        //$rt = array();
+        while ($row = mysql_fetch_array($query, MYSQL_ASSOC)) {
+            $info = new xwbstudent();
+            $info->setvalues($row);
+            return $info;
+        }
+        return null;
     }
 
 
