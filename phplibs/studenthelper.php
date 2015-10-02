@@ -52,7 +52,7 @@ class xwbstudent
             "stdgrade" => $grader,
             "stdaddress" => $address,
             "stdpayaddress" => $payaddr,
-            "createtime" =>  date("Y-m-d H:i:s")));
+            "createtime" => date("Y-m-d H:i:s")));
     }
 
     public static function isnumexist($num)
@@ -78,7 +78,52 @@ class xwbstudent
         }
         return null;
     }
+    
+    public static function getallstd($cff)
+    {
+        $db = new DB();
+        $sql = "select * from xwb_student where 1=1 and $cff";
+        $query = $db->query($sql);
+        $rt = array();
+        while ($row = mysql_fetch_array($query, MYSQL_ASSOC)) {
+            $info = new xwbstudent();
+            $info->setvalues($row);
+            $rt[] = $info;
+        }
+        return $rt;
+    }
 
+    public static function getstdlimit($cff,$id, $count)
+    {
+        $db = new DB();
+        $sql = "select * from xwb_student where 1=1 and $cff order by stdid limit $id,$count";
+        $query = $db->query($sql);
+        $rt = array();
+        while ($row = mysql_fetch_array($query, MYSQL_ASSOC)) {
+            $info = new xwbstudent();
+            $info->setvalues($row);
+            $rt[] = $info;
+        }
+        return $rt;
+    }
+    
+    public static function getstdlimitcount($cff)
+    {
+        $db = new DB();
+        $sql = "SELECT COUNT(*) as count FROM xwb_student WHERE 1=1 and $cff";
+        $query = $db->query($sql);
+        //$rt = array();
+        while ($row = mysql_fetch_array($query, MYSQL_ASSOC)) {
+            return $row['count'];
+        }
+        return false;
+    }
+
+    public static function deletestdbynum($num)
+    {
+        $db = new DB();
+        return $db->delete('xwb_student' ,"stdnum = '".trim($num)."'");
+    }
 
 }
 ?>
