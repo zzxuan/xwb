@@ -2,7 +2,9 @@
 session_start();
 require_once ("../common.php");
 //checklogin();
+require_once("../phplibs/userhelper.php");
 require_once ("../phplibs/studenthelper.php");
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mtype = $_POST['mtype'];
@@ -18,7 +20,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit();
     } else
         if ($mtype == 2) {
-            $cff = "stdpayaddress = '".$_SESSION['payaddress']."'";
+            $user = xwbuser::getloginuser();
+            $cff = "stdpayaddress = '".$user->userschoolname."'";
+            if($user->usertype == 0)
+            {
+                $cff = ' 1 = 1 ';
+            }
+            
+            if($_POST['cff'] == 1){
+                if(isset($_SESSION['cff']) && $_SESSION['cff'] != null){
+                    $cff = $_SESSION['cff'];
+                }
+                else{
+                    echo "没有可导出的数据";
+                    exit();
+                }
+            }
+
             $stds = xwbstudent::getallstd($cff);
 
             if ($stds != null) { //mb_substr($hk->hmworkrequire,0,25,'utf-8')

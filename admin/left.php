@@ -38,7 +38,8 @@ $(function(){
     <span><img src="../images/leftico01.png" /></span>管理菜单
     </div>
     	<ul class="menuson">
-        <li class="active"><cite></cite><a href="showstd.php" target="rightFrame">学生查看</a><i></i></li>
+        <li class="active"><cite></cite><a href="showstd.php" target="rightFrame">学生浏览</a><i></i></li>
+        <li><cite></cite><a href="searchstd.php" target="rightFrame">学生查询</a><i></i></li>
         </ul>    
     </dd>
 
