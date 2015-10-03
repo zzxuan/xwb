@@ -101,7 +101,7 @@ function checkboxclick()
     </div>
 
     </li>
-    <li><label>QQ号<b>*</b></label><input name="stdnum" type="text" class="nameinput" /><i>作为缴费的依据，请填写真实信息</i></li>
+    <li><label>账号<b>*</b></label><input name="stdnum" type="text" class="nameinput" /><i>作为后期查询信息的依据请仔细填写并牢记</i></li>
     <li><label>就读学校<b>*</b></label><input name="stdschool" type="text" class="dfinput" /><i>填写学校全称</i></li>
     <li><label>所在年级<b>*</b></label>
         

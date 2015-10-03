@@ -78,7 +78,7 @@ function checkboxclick()
     <form id="form1" name="form1" method="post">
     <ul class="forminfo">
     
-    <li><label>QQ号<b>*</b></label><input name="stdnum" type="text" class="nameinput" /><i>请输入注册的QQ账号</i></li>
+    <li><label>账号<b>*</b></label><input name="stdnum" type="text" class="nameinput" /><i>请输入注册的账号</i></li>
 
     <li><label>&nbsp;</label><input id="regsubbtn" name="" type="submit" class="btn" value="查询"/></li>
     </ul>
