@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     }
 }
 
-if($stdinfo == null){
+if ($stdinfo == null) {
     echo "<br><font color=\"#FF0000\">参数错误</font></br>";
     exit();
 }
@@ -82,32 +82,24 @@ function checkboxclick()
     <ul class="forminfo">
     <li><label>考生姓名<b>*</b></label><label><nobr ><?php echo $stdinfo->stdname; ?></nobr></label></li>
     <li><label>性别<b>*</b></label><label><nobr ><?php echo $stdinfo->stdgender; ?></nobr></label></li>
-    <li><label>QQ号<b>*</b></label><label><nobr ><?php echo $stdinfo->stdnum; ?></nobr></label></li>
+    <li><label>邮箱(账号)<b>*</b></label><label><nobr ><?php echo $stdinfo->stdnum; ?></nobr></label></li>
     <li><label>就读学校<b>*</b></label><label><nobr ><?php echo $stdinfo->stdschool; ?></nobr></label></li>
     <li><label>所在年级<b>*</b></label><label><nobr ><?php echo $stdinfo->stdgrade; ?></nobr></label></li>
-    <li><label>联系地址<b>*</b></label><label><nobr ><?php echo $stdinfo->stdaddress; ?></nobr></label></li>
-    <li><label>缴费地点<b>*</b></label><label><nobr ><?php echo $stdinfo->stdpayaddress; ?></nobr></label></li>
-    <li><label>注册时间<b>*</b></label><label><nobr ><?php echo $stdinfo->createtime; ?></nobr></label></li>
+    <li><label>联系地址<b>*</b></label><label><nobr ><?php echo $stdinfo->
+stdaddress; ?></nobr></label></li>
+    <li><label>缴费地点<b>*</b></label><label><nobr ><?php echo $stdinfo->
+stdpayaddress; ?></nobr></label></li>
+    <?php
+if ($stdinfo->stdtype != 0) {
+    echo "<li><label>电话<b>*</b></label><label><nobr >" . $stdinfo->stdphone .
+        "</nobr></label></li>";
+    echo "<li><label>QQ号<b>*</b></label><label><nobr >" . $stdinfo->stdqq .
+        "</nobr></label></li>";
+}
+?>
     
-    
-    <li><label>报名须知<b>*</b></label>
-    
-    <div class="divwstyle">
-        <div class="welinfo">
-        <span><img src="images/dp.png" alt="提醒" /></span>
-        <b>希望杯报名须知</b>
-        </div>
-        <ul class="infolist">
-        <li><span>一、参赛学生必须完成网上报名、授权点缴费方可具有参赛资格。</span></li>
-        <li><span>二、关注希望杯官方微信号公众号:xiwangbei 及时了解希望杯赛事相关信息。</span></li>
-        <li><span>&nbsp;&nbsp;</span><span><img  src="images/weixin.png" width="120" height="120"/></span></li> 
-        <li><span>三、加入希望杯官方QQ群，下载希望杯试题资料和详细解析，及时公布获奖信息。</span></li> 
-        <li><span>&nbsp;&nbsp;</span><span>四年级 12345678 &nbsp;&nbsp;五年级 12345678</span></li>  
-        <li><span>&nbsp;&nbsp;</span><span>六年级 12345678 &nbsp;&nbsp;初一年级 12345678</span></li> 
-        <li><span>&nbsp;&nbsp;</span><span>初二年级 12345678</span></li>     
-        </ul>
-    </div>
-    </li>
+    <li><label>注册时间<b>*</b></label><label><nobr ><?php echo $stdinfo->
+createtime; ?></nobr></label></li>
     </ul>
     
     </div>

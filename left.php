@@ -39,7 +39,7 @@ $(function(){
     </div>
     	<ul class="menuson">
         <li class="active"><cite></cite><a href="home.php" target="rightFrame">报名介绍</a><i></i></li>
-        <li><cite></cite><a href="reg.php" target="rightFrame">在线报名</a><i></i></li>
+        <li><cite></cite><a href="reginput.php" target="rightFrame">在线报名</a><i></i></li>
         <li><cite></cite><a href="stdsearch.php" target="rightFrame">报名查询</a><i></i></li>
         </ul>    
     </dd>

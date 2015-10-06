@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $text = "ID,账号,姓名,性别,学校,年级,地址,缴费学校,注册时间,\r\n";
                 fwrite($handle, $text);
                 foreach ($stds as $std) {
-                    $text = "$std->stdid,$std->stdnum,$std->stdname,$std->stdgender,$std->stdschool,$std->stdgrade,$std->stdaddress,$std->stdpayaddress,$std->createtime,\r\n";
+                    $text = "$std->stdid,$std->stdnum,$std->stdname,$std->stdgender,$std->stdschool,$std->stdgrade,$std->stdaddress,$std->stdpayaddress,$std->createtime,$std->stdphone,$std->stdqq,\r\n";
                     fwrite($handle, $text);
                 }
                 fclose($handle);

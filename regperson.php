@@ -6,20 +6,19 @@ require_once ("phplibs/studenthelper.php");
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ('' == $_POST['stdname'] || '' == $_POST['stdgender'] || '' == $_POST['stdnum'] ||
         '' == $_POST['stdschool']||'' == $_POST['stdgrade']||'' == $_POST['address']
-        ||'' == $_POST['payaddress']) {
+        ||'' == $_POST['payaddress']||'' == $_POST['stdphone']||'' == $_POST['stdqq']) {
         echo "<br><font color=\"#FF0000\">请检查输入内容</font></br>";
     } else {
         if(xwbstudent::isnumexist($_POST['stdnum'])){
             echo "<br><font color=\"#FF0000\">账号已存在请重新注册</font></br>";
-        }
-        else if(!CheckEmail($_POST['stdnum'])){
+        }else if(!CheckEmail($_POST['stdnum'])){
             echo "<br><font color=\"#FF0000\">邮箱不合法,请输入常用邮箱!</font></br>";
         }
-        else{ 
-            
-            if(xwbstudent::addstudent($_POST['stdname'],$_POST['stdnum']
+        else{
+            if(xwbstudent::addstudentperson($_POST['stdname'],$_POST['stdnum']
             ,$_POST['stdgender'],$_POST['stdschool'],$_POST['stdgrade']
-            ,$_POST['address'],$_POST['payaddress']
+            ,$_POST['address'],$_POST['payaddress'],$_POST['stdphone']
+            ,$_POST['stdqq']
             ))
             {
                 echo "<br><font color=\"#FF0000\">注册成功!</font></br>";
@@ -106,6 +105,8 @@ function checkboxclick()
 
     </li>
     <li><label>邮箱<b>*</b></label><input name="stdnum" type="text" class="nameinput" /><i>作为登录账号,请填写您的常用邮箱</i></li>
+    <li><label>电话<b>*</b></label><input name="stdphone" type="text" class="nameinput" /></li>
+    <li><label>QQ号<b>*</b></label><input name="stdqq" type="text" class="nameinput" /></li>
     <li><label>就读学校<b>*</b></label><input name="stdschool" type="text" class="dfinput" /><i>填写学校全称</i></li>
     <li><label>所在年级<b>*</b></label>
         
@@ -125,15 +126,7 @@ function checkboxclick()
     
     <div class="vocation">
     <select class="select1" name="payaddress">
-    <option>西安弘文教育</option>
-    <option>西安付老师教室</option>
-    <option>西安武江教育</option>
-    <option>西安育人学校南郊分校</option>
-    <option>西安朗文外国语培训学校</option>
-    <option>西安朗文学校金博士分校</option>
-    <option>西安朗文学校子成教育</option>
-    <option>西安成龙学校</option>
-    <option>西安帝京学校</option>
+    <option>希望杯组委会</option>
     </select>
     </div>
     </li>

@@ -1,26 +1,8 @@
-<?php
-session_start();
-require_once ("common.php");
-require_once ("phplibs/studenthelper.php");
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if ( '' == $_POST['stdnum'] ) {
-        echo "<br><font color=\"#FF0000\">请检查输入内容</font></br>";
-    } else {
-        if(xwbstudent::isnumnameexist($_POST['stdnum'],$_POST['stdname'])){
-            jumpto("stdshow.php?num=".$_POST['stdnum']);
-        }
-        else{
-            echo "<br><font color=\"#FF0000\">账号不存在或与姓名不匹配</font></br>";
-        }
-    }
-}
-?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>学生查询</title>
+<title>报名入口</title>
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 <link href="css/select.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="js/jquery.js"></script>
@@ -57,33 +39,67 @@ function checkboxclick()
         margin:10px 10px 10px 85px;
         border:1px solid #99cccc;
     }
+    .wrap
+    {
+        margin:0 auto;
+        width:960px;
+        background:#F00; 
+        color:#FFF;
+        text-align:center;
+    } 
+    /*主面板样式*/
+    #container { 
+        width:880px; 
+        margin:0px auto;/*主面板DIV居中*/
+    }
+   /*顶部面板样式*/
+    #header {
+        width:100%;
+        height:100px;
+    }
+    /*底部面板样式*/
+    #footer {
+        width:100%;
+        height:100px;
+    }
+    .cat, .sidebar {
+        float:left;
+        width:50%;
+        height:100%;
+        text-align:center;
+    }
 </style>
 </head>
 
 </head>
 
-<body>
+<body >
 
 	<div class="place">
     <span>位置：</span>
     <ul class="placeul">
     <li><a href="#">首页</a></li>
-    <li><a href="#">在线报名</a></li>
+    <li><a href="#">报名入口</a></li>
     </ul>
     </div>
+    <div id="container"> 
+    <div id="header">
     
-    <div class="formbody">
+    </div> 
+    <div id="main"> 
+        <div class="cat">
+            <a href="reg.php">
+                <img src="./images/xwbtuanti.png" height="50" width="200" alt="团体报名入口" />
+            </a>
+        </div> 
+        <div class="sidebar">
+            <a href="regperson.php">
+                <img src="./images/xwbgeren.png" height="50" width="200" alt="个人报名入口" />
+            </a>
+        </div> 
+    </div> 
+</div> 
     
-    <div class="formtitle"><span>信息查询</span></div>
-    <form id="form1" name="form1" method="post">
-    <ul class="forminfo">
-    
-    <li><label>姓名<b>*</b></label><input name="stdname" type="text" class="nameinput" /><i>请输入注册的姓名</i></li>
-    <li><label>账号<b>*</b></label><input name="stdnum" type="text" class="nameinput" /><i>请输入注册的邮箱</i></li>
-    <li><label>&nbsp;</label><input id="regsubbtn" name="" type="submit" class="btn" value="查询"/></li>
-    </ul>
-    </form>
-    
-    </div>
+
 </body>
 </html>
