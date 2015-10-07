@@ -122,20 +122,17 @@ function checkboxclick()
     
     <div class="vocation">
     <select class="select1" name="payaddress">
-    <option>西安市铁一中</option>
-    <option>西安市高新一中</option>
-    <option>西工大附中</option>
-    <option>西交大附中</option>
-    <option>陕师大附中</option>
-    <option>西安弘文教育</option>
-    <option>西安付老师教室</option>
+    <option>西安朗文学校</option>
+    <option>弘文教育</option>
+    <option>西安辉煌教育</option>
+    <option>子成教育</option>
+    <option>西工大李高奇培优学校</option>
+    <option>盛元教育</option>
+    <option>史周教育</option>
     <option>西安武江教育</option>
-    <option>西安育人学校南郊分校</option>
-    <option>西安朗文外国语培训学校</option>
-    <option>西安朗文学校金博士分校</option>
-    <option>西安朗文学校子成教育</option>
-    <option>西安成龙学校</option>
-    <option>西安帝京学校</option>
+    <option>新博雅教育</option>
+    <option>育人学校</option>
+    <option>金博士学校</option>
     </select>
     </div>
     </li>
