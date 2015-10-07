@@ -111,9 +111,8 @@ function checkboxclick()
         
     <div class="vocation">
     <select class="select2" name="stdgrade">
-    <option>四年级</option>
-    <option>五年级</option>
-    <option>六年级</option>
+    <option>初一年级</option>
+    <option>初二年级</option>
     </select>
     </div>
     

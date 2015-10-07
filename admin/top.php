@@ -18,19 +18,9 @@ $(function(){
 
 </head>
 
-<body style="background:url(../images/topbg.gif) repeat-x;">
-
-    <div class="topleft">
-    <a href="main.html" target="_parent"><img src="../images/logo.png" title="系统首页" /></a>
-    </div>
-            
-    <div class="topright">    
-    <ul>
-    <li><span><img src="../images/help.png" title="帮助"  class="helpimg"/></span><a href="#">帮助</a></li>
-    <li><a href="#">关于</a></li>
-    <li><a href="login.php" target="_parent">退出</a></li>
-    </ul>
-    
-    </div>
+<body>
+    <div id="Layer1" style="position:absolute; width:100%; height:100%; z-index:-1">    
+        <img src="../images/xwbtitle.jpg" height="100%" width="100%"/>    
+    </div>  
 </body>
 </html>
