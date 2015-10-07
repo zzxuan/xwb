@@ -37,7 +37,7 @@ CREATE TABLE `xwb_student` (
   `stdvalue2` varchar(256) DEFAULT NULL,
   `stdvalue3` varchar(256) DEFAULT NULL,
   PRIMARY KEY (`stdid`)
-) ENGINE=InnoDB AUTO_INCREMENT=8274 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=100 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of xwb_student
