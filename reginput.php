@@ -2,13 +2,37 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1, user-scalable=0, minimal-ui">
 <title>报名入口</title>
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 <link href="css/select.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/jquery.idTabs.min.js"></script>
 <script type="text/javascript" src="js/select-ui.min.js"></script>
-
+<script type="text/javascript"> 
+<!-- 
+        //平台、设备和操作系统 
+        var system = { 
+            win: false, 
+            mac: false, 
+            xll: false, 
+            ipad:false 
+        }; 
+        //检测平台 
+        var p = navigator.platform; 
+        system.win = p.indexOf("Win") == 0; 
+        system.mac = p.indexOf("Mac") == 0; 
+        system.x11 = (p == "X11") || (p.indexOf("Linux") == 0); 
+        system.ipad = (navigator.userAgent.match(/iPad/i) != null)?true:false; 
+        //跳转语句，如果是手机访问就自动跳转到wap.baidu.com页面 
+        if (system.win || system.mac || system.xll||system.ipad) { 
+ //window.location.href = "reginputMobile.php"; 
+        } else { 
+ 
+            window.location.href = "reginputMobile.php"; 
+        } 
+--> 
+</script> 
 
 <script type="text/javascript">
 $(document).ready(function(e) {
