@@ -5,7 +5,7 @@ require_once ("phplibs/studenthelper.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ('' == $_POST['stdname'] || '' == $_POST['stdgender'] || '' == $_POST['stdnum'] ||
-        '' == $_POST['stdschool']||'' == $_POST['stdgrade']||'' == $_POST['address']
+        '' == $_POST['stdschool']||'' == $_POST['stdgrade']
         ||'' == $_POST['payaddress']) {
         echo "<br><font color=\"#FF0000\">请检查输入内容</font></br>";
     } else {
@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             
             if(xwbstudent::addstudent($_POST['stdname'],$_POST['stdnum']
             ,$_POST['stdgender'],$_POST['stdschool'],$_POST['stdgrade']
-            ,$_POST['address'],$_POST['payaddress']
+            ,'',$_POST['payaddress']
             ))
             {
                 echo "<br><font color=\"#FF0000\">注册成功!</font></br>";
@@ -120,11 +120,15 @@ function checkboxclick()
     </div>
     
     </li>
-    <li><label>联系地址<b>*</b></label><input name="address" type="text" class="dfinput" /></li>
     <li><label>缴费地点<b>*</b></label>
     
     <div class="vocation">
     <select class="select1" name="payaddress">
+    <option>西安市铁一中</option>
+    <option>西安市高新一中</option>
+    <option>西工大附中</option>
+    <option>西交大附中</option>
+    <option>陕师大附中</option>
     <option>西安弘文教育</option>
     <option>西安付老师教室</option>
     <option>西安武江教育</option>

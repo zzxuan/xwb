@@ -85,12 +85,12 @@ function checkboxclick()
     <li><label>邮箱(账号)<b>*</b></label><label><nobr ><?php echo $stdinfo->stdnum; ?></nobr></label></li>
     <li><label>就读学校<b>*</b></label><label><nobr ><?php echo $stdinfo->stdschool; ?></nobr></label></li>
     <li><label>所在年级<b>*</b></label><label><nobr ><?php echo $stdinfo->stdgrade; ?></nobr></label></li>
-    <li><label>联系地址<b>*</b></label><label><nobr ><?php echo $stdinfo->
-stdaddress; ?></nobr></label></li>
     <li><label>缴费地点<b>*</b></label><label><nobr ><?php echo $stdinfo->
 stdpayaddress; ?></nobr></label></li>
     <?php
 if ($stdinfo->stdtype != 0) {
+    echo "<li><label>联系地址<b>*</b></label><label><nobr >" . $stdinfo->stdaddress .
+        "</nobr></label></li>";
     echo "<li><label>电话<b>*</b></label><label><nobr >" . $stdinfo->stdphone .
         "</nobr></label></li>";
     echo "<li><label>QQ号<b>*</b></label><label><nobr >" . $stdinfo->stdqq .
