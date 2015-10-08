@@ -63,17 +63,29 @@ function checkboxclick()
 </head>
 
 <body >
+<div style="position:absolute; width:1080px; height:560px; z-index:-1;overflow:auto;">
     <div id="Layer1" style="position:absolute; width:100%; height:100%; z-index:-1">    
         <img src="images/xwbzbg.png" height="100%" width="100%"/>    
     </div>
-    <div style="position:fixed;left:60%;top: 20%;width:15%; height:10%; ">    
+    <div style="position:absolute;left:60%;top: 20%;width:15%; height:10%; ">    
         <a href="regchuxiao.php"><img src="images/xwbtuanti.png" height="100%" width="100%"/></a>    
     </div> 
-    <div style="position:fixed;left:60%;top: 30%; width:15%; height:10%;">    
+    <div style="position:absolute;left:60%;top: 30%; width:16%; height:9%;">    
         <a href="regperson.php"><img src="images/xwbgeren.png" height="100%" width="100%"/></a>     
     </div>
 </div> 
-    
+    <script type="text/javascript">
+if(document.body.scrollWidth>document.body.scrollHeight){
+document.getElementById('divbody').style.width=document.body.scrollWidth + 'px';
+document.getElementById('divbody').style.height=document.body.scrollHeight + 'px';
+}
+else
+{
+    document.getElementById('divbody').style.width=document.body.scrollWidth + 'px';
+    document.getElementById('divbody').style.height=document.body.scrollWidth * 0.6 + 'px';
+}
+
+</script>
 
 </body>
 </html>

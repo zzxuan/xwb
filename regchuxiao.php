@@ -32,7 +32,6 @@ function checkboxclick()
  btn.style.background="#4154e2"; 
  btn.disabled = false;
 }
-
 </script>
 
 </head>
@@ -40,17 +39,29 @@ function checkboxclick()
 </head>
 
 <body >
+<div id="divbody" style="position:absolute; width:1080px; height:560px; z-index:-1;overflow:auto;">
     <div id="Layer1" style="position:absolute; width:100%; height:100%; z-index:-1">    
         <img src="images/xwbcxbg.png" height="100%" width="100%"/>    
     </div>
-    <div style="position:fixed;left:20%;top: 20%;width:15%; height:10%; ">    
+    <div style="position:absolute;left:20%;top: 20%;width:15%; height:10%; ">    
         <a href="regchuzhong.php"><img src="images/xwbcz.png" height="100%" width="100%"/></a>    
     </div> 
-    <div style="position:fixed;left:20%;top: 35%; width:15%; height:10%;">    
+    <div style="position:absolute;left:19%;top: 35%; width:18%; height:10%;">    
         <a href="reg.php"><img src="images/xwbxx.png" height="100%" width="100%"/></a>     
     </div>
 </div> 
-    
+<script type="text/javascript">
+if(document.body.scrollWidth>document.body.scrollHeight){
+document.getElementById('divbody').style.width=document.body.scrollWidth + 'px';
+document.getElementById('divbody').style.height=document.body.scrollHeight + 'px';
+}
+else
+{
+    document.getElementById('divbody').style.width=document.body.scrollWidth + 'px';
+    document.getElementById('divbody').style.height=document.body.scrollWidth * 0.6 + 'px';
+}
+
+</script>
 
 </body>
 </html>
