@@ -29,7 +29,7 @@
  //window.location.href = "reginputMobile.php"; 
         } else { 
  
-            window.location.href = "reginputMobile.php"; 
+            //window.location.href = "reginputMobile.php"; 
         } 
 --> 
 </script> 
