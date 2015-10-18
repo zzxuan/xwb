@@ -50,7 +50,7 @@ h2{font-weight:normal;}
 
 /*top.html*/
 .header{height:88px;}
-.topleft{height:88px;background:url(../images/topleft.jpg) no-repeat;float:left; width:300px;}
+.topleft{height:88px; no-repeat;float:left; width:300px;}
 .topleft img{margin-top:12px;margin-left:10px;}
 .topright{height:88px;background:url(../images/topright.jpg) no-repeat right;float:right;}
 .nav{float:left;}
@@ -204,7 +204,7 @@ h2{font-weight:normal;}
 .tipright{float:left;padding-top:15px; padding-left:10px;}
 .tipright p{font-size:14px; font-weight:bold; line-height:35px;}
 .tipright cite{color:#858686;}
-.tipbtn{margin-top:25px; margin-left:125px;}
+.tipbtn{margin-top:25px; margin-left:225px;}
 .sure ,.cancel{width:96px; height:35px; line-height:35px; color:#fff; background:url(../images/btnbg1.png) repeat-x; font-size:14px; font-weight:bold;border-radius: 3px; cursor:pointer;}
 .cancel{background:url(../images/btnbg2.png) repeat-x;color:#000;font-weight:normal;}
 

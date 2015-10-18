@@ -28,4 +28,9 @@ function CheckEmail($email)
     return FALSE;  
 } 
 
+function showerr($msg)
+{
+    echo "<script language=\"JavaScript\">alert(\"$msg\");</script>"; 
+}
+
 ?>

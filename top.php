@@ -19,6 +19,11 @@ $(function(){
 </head>
 
 <body>
+<!--
+<div class="topleft">
+    <img src="images/logo.jpg" width="88"/>
+</div>
+-->
     <div id="Layer1" style="position:absolute; width:100%; height:100%; z-index:-1">    
         <img src="images/xwbtitle.jpg" height="100%" width="100%"/>    
     </div>  
