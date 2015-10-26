@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         ||'' == $_POST['payaddress']) {
         $err =  "<font color=\"#FF0000\">请检查输入内容</font>";
         //$err = "请检查输入内容";
-    } else if(!preg_match('/^[\x80-\xff]{4,8}$/',$_POST['stdname'])){//匹配2到四个汉字  
+    } else if(!preg_match('/^[\x80-\xff]{2,16}$/',$_POST['stdname'])){//匹配2到四个汉字  
         $err = "<font color=\"#FF0000\">请输入正确的姓名(2-4个汉字)</font>";       
     }else {
         if(xwbstudent::isnumexist($_POST['stdnum'])){
